@@ -29,6 +29,11 @@ namespace DotNetDrinksWebUI.Controllers
             return View("Privacy");
         }
 
+        public IActionResult Support()
+        {
+            return View("Support");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
