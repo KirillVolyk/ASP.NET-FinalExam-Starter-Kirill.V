@@ -31,9 +31,29 @@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Image)
         </dt>
+        @* ADD IMG HERE (underneath) *@
         <dd class="col-sm-10">
-            @* ADD IMG HERE *@
+            
         </dd>
+        @* <dt class="col-sm-2"> tech jockies code
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class="col-sm-10">
+            @if (!String.IsNullOrEmpty(Model.Image))
+            {
+                <img src="~/img/@Model.Image"
+                     class="image-thumbnail"
+                     style="max-width:250px"
+                     alt="Image of a @Model.Name" />
+            }
+            else
+            {
+                <img src="~/img/@Model.Image"
+                     class="image-thumbnail"
+                     style="max-width:250px"
+                     alt="Placeholder Image" />
+            }
+        </dd> *@
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Brand)
         </dt>
