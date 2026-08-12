@@ -13,6 +13,7 @@ namespace DotNetDrinksWebUI.API;
 [ApiController]
 public class ProductsController : ControllerBase
 {
+    //just for git commit
     private readonly ApplicationDbContext _context;
 
     public ProductsController(ApplicationDbContext context)
