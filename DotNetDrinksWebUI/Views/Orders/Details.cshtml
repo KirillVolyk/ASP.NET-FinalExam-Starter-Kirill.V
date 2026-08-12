@@ -76,6 +76,8 @@
             <th>Product</th>
             <th class="text-right">Quantity</th>
             <th class="text-right">Price</th>
+            @* add inline total price *@
+            <td class="text-right">Price</td>
             @* image *@
             <th class="text-right">Image</th>
         </tr>
@@ -86,8 +88,10 @@
             <td>@item.Product.Name</td>
             <td class="text-right">@item.Quantity</td>
             <td class="text-right">@item.Price.ToString("C")</td>
+            @* add inline total price *@
+            <td class="text-right">@((item.Price * item.Quantity).ToString("C"))</td>
             <td class="text-right">
-                @* For somereason it does this, and not the else like in our class example *@
+                @* For somereason it does this, and not the else statement like in our class example *@
                 @if (!String.IsNullOrEmpty(item.Product.Image))
                 {
                     @* Made it Url/a tag, since it is wanted to open in a new tab *@
